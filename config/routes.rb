@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   get 'residential' => 'pages#residential'
   get 'quote' => 'pages#quote'
   get 'index' => 'pages#index'
-  get 'signups-auth' => 'passwords#new'
+  get 'signups-auth' => 'pages#signups-auth'
+  post 'signups-auth', action: :create, controller: "passwords"
 
 #  get 'users/:id' => 'users#show', as: :user
 #  post 'sign_up' => 'users#show'

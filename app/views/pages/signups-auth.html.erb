@@ -1,1 +1,5 @@
-Hello World
+<%= form_with url: "/signups-auth", method: :post do |form| %>
+  <%= form.label :password, "Please provide the password for the sign-up page:" %>
+  <%= form.password_field :password %>
+  <%= form.submit "Verify" %>
+<% end %>
