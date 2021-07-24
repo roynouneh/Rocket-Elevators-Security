@@ -1,0 +1,21 @@
+            <div class='row'>
+              <h4>Step 5/5</h4>
+              <p>Select Elevator</p>
+              <select  name="intervention[elevator_id]" id="select-elevator" class="form-select" aria-label="select example" autocomplete="off">
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@elevators.nil? %>
+                <% @elevators.each do |elevator| %>
+
+                  <option value="<%= elevator.id %>">
+                    <%= elevator.id %>
+                  </option>
+
+                <% end %>
+              <% end %>
+
+              </select>
+            </div>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Rocket Elevators - Commercial Overview</title>
+  <meta name="description" content="" />
+  <meta name="Author" content="Luka Gasic" />
+
+  <!-- mobile settings -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+  <!-- WEB FONTS : use %7C instead of | (pipe) -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+</head>
+
+<!--
+  AVAILABLE BODY CLASSES:
+
+  smoothscroll 			= create a browser smooth scroll
+  enable-animation		= enable WOW animations
+
+  bg-grey					= grey background
+  grain-grey				= grey grain background
+  grain-blue				= blue grain background
+  grain-green				= green grain background
+  grain-blue				= blue grain background
+  grain-orange			= orange grain background
+  grain-yellow			= yellow grain background
+
+  boxed 					= boxed layout
+  pattern1 ... patern11	= pattern background
+  menu-vertical-hide		= hidden, open on click
+
+  BACKGROUND IMAGE [together with .boxed class]
+  data-background="assets/images/_smarty/boxed_background/1.jpg"
+-->
+<body class="smoothscroll enable-animation">
+
+<!-- wrapper -->
+<div id="wrapper">
+
+  <!--
+    AVAILABLE HEADER CLASSES
+
+    Default nav height: 96px
+    .header-md 		= 70px nav height
+    .header-sm 		= 60px nav height
+
+    .b-0 		= remove bottom border (only with transparent use)
+    .transparent	= transparent header
+    .translucent	= translucent header
+    .sticky			= sticky header
+    .static			= static header
+    .dark			= dark header
+    .bottom			= header on bottom
+
+    shadow-before-1 = shadow 1 header top
+    shadow-after-1 	= shadow 1 header bottom
+    shadow-before-2 = shadow 2 header top
+    shadow-after-2 	= shadow 2 header bottom
+    shadow-before-3 = shadow 3 header top
+    shadow-after-3 	= shadow 3 header bottom
+
+    .clearfix		= required for mobile menu, do not remove!
+
+    Example Usage:  class="clearfix sticky header-sm transparent b-0"
+  -->
+  <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+    <!-- TOP NAV -->
+    <header id="topNav">
+      <div class="container">
+
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Logo -->
+        <a class="logo float-left" href="#top">
+          <!--<img src="assets/images/R2.png" alt="" />-->
+          <%= image_tag ("R2.png") %>
+        </a>
+
+        <!--
+          Top Nav
+
+          AVAILABLE CLASSES:
+          submenu-dark = dark sub menu
+        -->
+        <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+          <nav class="nav-main">
+
+            <!--
+              .nav-onepage
+              Required for onepage navigation links
+
+              Add .external for an external link!
+            -->
+            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+              <li class="active"><!-- HOME -->
+                <a href="index.html">
+                  HOME
+                </a>
+              </li>
+              <li><!-- SERVICES -->
+                <a href="index.html#services">
+                  SERVICES
+                </a>
+              </li>
+              <li><!-- WORK -->
+                <a href="index.html#portfolio">
+                  PORTFOLIO
+                </a>
+              </li>
+              <li><!-- NEWS -->
+                <a href="index.html#news">
+                  NEWS
+                </a>
+              </li>
+              <li><!-- CLIENTS -->
+                <a href="index.html#clients">
+                  CLIENTS
+                </a>
+              </li>
+              <li><!-- CONTACT -->
+                <a href="index.html#contact">
+                  CONTACT
+                </a>
+              </li>
+              <li><!-- INTERVENTIONS -->
+                <a href="/interventions">
+                  INTERVENTIONS
+                </a>
+              </li>
+            </ul>
+
+          </nav>
+        </div>
+
+      </div>
+    </header>
+    <!-- /Top Nav -->
+
+  </div>
+
+
+
+  <!-- REVOLUTION SLIDER -->
+  <div class="slider fullwidthbanner-container roundedcorners">
+    <!--
+      Navigation Styles:
+
+        data-navigationStyle="" theme default navigation
+
+        data-navigationStyle="preview1"
+        data-navigationStyle="preview2"
+        data-navigationStyle="preview3"
+        data-navigationStyle="preview4"
+
+      Bottom Shadows
+        data-shadow="1"
+        data-shadow="2"
+        data-shadow="3"
+
+      Slider Height (do not use on fullscreen mode)
+        data-height="300"
+        data-height="350"
+        data-height="400"
+        data-height="450"
+        data-height="500"
+        data-height="550"
+        data-height="600"
+        data-height="650"
+        data-height="700"
+        data-height="750"
+        data-height="800"
+    -->
+    <div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+      <ul class="hide">
+
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtotop" data-delay="7000" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Rocket Elevators">
+          <!-- MAIN IMAGE -->
+          <!--<img src="assets/images/AdobeStock_66781279.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">-->
+          <%= image_tag("AdobeStock_66781279.jpeg", :alt=>"cover image", :data => "center top", :data => "cover", :data => "no-repeat") %>
+          <div class="tp-caption white_big skewfromleft tp-resizeme"
+               data-x="471"
+               data-y="100"
+               data-speed="400"
+               data-start="1500"
+               data-easing="Power3.easeInOut"
+               data-splitin="words"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="600"
+               style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+            Rocket Elevators
+          </div>
+
+          <div class="tp-caption content_text_center skewfromleft tp-resizeme"
+               data-x="530"
+               data-y="195"
+               data-speed="500"
+               data-start="2000"
+               data-easing="Power3.easeInOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="600"
+
+               style="z-index: 3; font-size:30px; color:#fff; font-weight:300; text-shadow:none;">
+            Elevate Safety, Speed and Style.
+          </div>
+
+          <div class="tp-caption tp-fade"
+               data-x="left"
+               data-y="25"
+               data-speed="300"
+               data-start="800"
+               data-easing="Power3.easeInOut"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="300"
+               style="z-index: 4;">
+          </div>
+
+          <div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+               data-x="665"
+               data-y="300"
+               data-speed="300"
+               data-start="2500"
+               data-easing="Power3.easeInOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="300"
+
+               style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+            <a class="btn btn-warning btn-lg btn-red" href="index.html#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+        </li>
+
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtotop" data-delay="7000" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential">
+          <!-- MAIN IMAGE -->
+          <!--<img src="assets/images/AdobeStock_179073967.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">-->
+          <%= image_tag("AdobeStock_66781279.jpeg", :alt=>"cover image", :data => "center top", :data => "cover", :data => "no-repeat") %>
+          <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+          <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+               data-x="50"
+               data-y="100"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Cubic.easeOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+            Residential
+          </div>
+
+          <div class="tp-caption skewfromrightshort tp-resizeme"
+               data-x="50"
+               data-y="300"
+               data-speed="500"
+               data-start="1000"
+               data-easing="easeInCirc"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 3; font-size:30px; color:#fff; font-weight:300; text-shadow:none;">
+            Looking to acquire elevators for your residential building? <br/>
+            Look no further!
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+               data-x="50"
+               data-y="410"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Power3.easeIn"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 4; max-width: auto;">
+            <a class="btn btn-warning btn-lg btn-red" href="index.html#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+               data-x="250"
+               data-y="410"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Power3.easeInOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+            <a class="btn btn-default btn-lg" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+        </li>
+
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtotop" data-delay="7000" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Corporate">
+          <!-- MAIN IMAGE -->
+          <!--<img src="assets/images/AdobeStock_33975620.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">-->
+          <%= image_tag("AdobeStock_33975620.jpeg", :alt => "cover image", :data => "center top", :data => "cover", :data => "no-repeat") %>
+          <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+          <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+               data-x="50"
+               data-y="100"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Cubic.easeOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+            Corporate
+          </div>
+
+          <div class="tp-caption skewfromrightshort tp-resizeme"
+               data-x="50"
+               data-y="300"
+               data-speed="500"
+               data-start="1000"
+               data-easing="easeInCirc"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 3; font-size:30px; color:#fff; font-weight:300; text-shadow:none;">
+            Looking to acquire elevators for your corporate building? <br/>
+            Look no further!
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+               data-x="50"
+               data-y="410"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Power3.easeIn"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 4; max-width: auto;">
+            <a class="btn btn-warning btn-lg btn-red" href="index.html.erb#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+               data-x="250"
+               data-y="410"
+               data-speed="500"
+               data-start="1500"
+               data-easing="Power3.easeInOut"
+               data-splitin="none"
+               data-splitout="none"
+               data-elementdelay="0.1"
+               data-endelementdelay="0.1"
+               data-endspeed="500"
+               style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+            <a class="btn btn-default btn-lg" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+  <!-- /REVOLUTION SLIDER -->
+
+
+  <hr class="m-0" /><!-- 1px line separator -->
+
+
+
+
+  <!-- Overview -->
+  <section id="overview">
+    <div class="container text-center">
+
+      <div class="row text-left">
+
+        <div class="col-md-8">
+          <!--<img class="img-fluid" src="assets/images/commercial_700x374.jpg" alt="product image" />-->
+          <%= image_tag("commercial_700x374.jpg", :alt => "product image", :class => "img-fluid") %>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="fw-300">Commercial <span>Overview</span></h3>
+
+          <p>Here at Rocket Elevators we strive to bring you only the top quality products.</p>
+          <p>For any of your commercial projects don't hesitate to ask for a quote!</p>
+
+          <hr />
+
+          <ul class="list-unstyled list-icons">
+            <li><i class="fa fa-check"></i> Quality</li>
+            <li><i class="fa fa-check"></i> Warranty</li>
+            <li><i class="fa fa-check"></i> Great Price</li>
+            <li><i class="fa fa-check"></i> Modern Design</li>
+            <li><i class="fa fa-check"></i> Safety</li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /Overview -->
+
+
+
+
+  <!-- BUTTON CALLOUT
+<a href="#" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+<span class="font-lato fs-30">
+Did Rocket Elevators convince you?
+<strong>Contact us &raquo;</strong>
+</span>
+</a>
+/BUTTON CALLOUT -->
+
+
+
+
+  <!-- Parallax -->
+  <section class="parallax parallax-1" style="background-image: url('assets/images/AdobeStock_162479912.jpeg');">
+    <div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+    <div class="container">
+
+      <div class="text-center">
+        <h2 class="fs-40 fw-300">Building Elevators Since 1967</h2>
+        <a class="btn btn-default btn-lg" href="quote.html">GET A QUOTE <i class="fa fa-angle-right"></i></a>
+        &nbsp; OR &nbsp;
+        <a class="btn btn-warning btn-lg" href="index.html#services">OUR SERVICES <i class="fa fa-angle-right"></i></a>
+      </div>
+
+    </div>
+  </section>
+  <!-- /Parallax -->
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+
+      <header class="text-center mb-60">
+        <h2>Contact Us</h2>
+        <p class="lead font-lato"></p>
+        <hr />
+      </header>
+
+
+      <div class="row">
+
+        <!-- FORM -->
+        <div class="col-md-8 col-sm-8">
+
+          <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+
+          <!--
+            MESSAGES
+
+              How it works?
+              The form data is posted to php/contact.php where the fields are verified!
+              php.contact.php will redirect back here and will add a hash to the end of the URL:
+                #alert_success 		= email sent
+                #alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+                #alert_mandatory	= email not sent - required fields empty
+                Hashes are handled by assets/js/contact.js
+
+              Form data: required to be an array. Example:
+                contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+                Also, add `required` to input fields if is a mandatory field.
+                Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+              PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+                     ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+              WARNING! Do not change the `email` and `name`!
+                    contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+                    contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+          -->
+
+          <!-- Alert Success -->
+          <div id="alert_success" class="alert alert-success mb-30">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Thank You!</strong> Your message successfully sent!
+          </div><!-- /Alert Success -->
+
+
+          <!-- Alert Failed -->
+          <div id="alert_failed" class="alert alert-danger mb-30">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>[SMTP] Error!</strong> Internal server error!
+          </div><!-- /Alert Failed -->
+
+
+          <!-- Alert Mandatory -->
+          <div id="alert_mandatory" class="alert alert-danger mb-30">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+          </div><!-- /Alert Mandatory -->
+
+
+          <form action="/leads" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <input type="hidden" name="action" value="contact_send" />
+
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="name">Full Name *</label>
+                  <input required type="text" name="lead[full_name]" value="" class="form-control" name="contact[name][required]" id="name">
+                </div>
+                <div class="col-md-4">
+                  <label for="email">E-mail Address *</label>
+                  <input required type="email" name="lead[email]" value="" class="form-control" name="contact[email][required]" id="email">
+                </div>
+                <div class="col-md-4">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" name="lead[phone]" value="" class="form-control" name="contact[phone]" id="phone">
+                </div>
+                <div class="col-md-4">
+                  <label for="company_name">Business Name *</label>
+                  <input required type="text" name="lead[company_name]" value="" class="form-control" name="contact[name][required]" id="company_name">
+                </div>
+                <div class="col-md-4">
+                  <label for="project_name">Project Name *</label>
+                  <input required type="text" name="lead[project_name]" value="" class="form-control" name="contact[name][required]" id="project_name">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <label for="project_description">Project Description *</label>
+                  <input required type="text" name="lead[project_description]" value="" class="form-control" name="contact[subject][required]" id="project_description">
+                </div>
+                <div class="col-md-4">
+                  <label for="department">Department</label>
+                  <select class="form-control pointer" name="lead[department]" id="department">
+                    <option value="">--- Select ---</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Hybrid">Hybrid</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="message">Message *</label>
+                  <textarea name="lead[message]" maxlength="10000" rows="8" class="form-control" name="contact[message]" id="message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="attachment">File Attachment *</label>
+
+                  <!-- custom file upload -->
+                  <input required class="custom-file-upload" type="file" id="file" name="lead[attachment]" id="attachment" data-btn-text="Select a File" />
+                  <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+                </div>
+              </div>
+
+            </fieldset>
+
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <!-- /FORM -->
+
+
+        <!-- INFO -->
+        <div class="col-md-4 col-sm-4">
+
+          <h2>Visit Us</h2>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.515701213006!2d-73.56930918427182!3d45.45941454178349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91067ae856153%3A0x320cd8b1b79bec0f!2s4468%20Wellington%20St%20Suite%20204%2C%20Verdun%2C%20QC%20H4G%201W5!5e0!3m2!1sen!2sca!4v1620916156070!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <!-- <div id="map2" class="h-100 grayscale"></div> -->
+
+          <hr />
+
+          <p>
+            <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</span>
+            <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
+            <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+          </p>
+
+        </div>
+        <!-- /INFO -->
+
+      </div>
+
+    </div>
+  </section>
+  <!-- /CONTACT -->
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- col #1 -->
+        <div class="col-md-8">
+
+          <h3 class="letter-spacing-1">WHY US?</h3>
+
+          <!-- Small Description -->
+          <p>
+            We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+          </p>
+          <%= sanitize @streamer %>
+          <br>
+          <h2>(418) 555-1234</h2>
+        </div>
+        <!-- /col #1 -->
+
+
+
+      </div>
+
+
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <ul class="float-right m-0 list-inline mobile-block">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li>&bull;</li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+        &copy; All Rights Reserved, Company LTD
+      </div>
+    </div>
+
+  </footer>
+  <!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="inner">
+    <span class="loader"></span>
+  </div>
+</div><!-- /PRELOADER -->
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'assets/plugins/';</script>
+<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/scripts.js"></script>
+
+
+
+<!-- REVOLUTION SLIDER -->
+<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+<!-- PAGELEVEL SCRIPTS -->
+<script src="assets/js/contact.js"></script>
+
+
+</body>
+</html>

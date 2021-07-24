@@ -1,0 +1,146 @@
+<%= form_with(model: @intervention, local: true) do |form| %>
+  <% if intervention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intervention.errors.count, "error") %> prohibited this intervention from being saved:</h2>
+
+      <ul>
+      <% intervention.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- INTERVENTIONS -->
+
+  <section id="interventions">
+    <div class="container">
+       <header class="mb-60">
+       <!--
+        <h2 class="text-center">Interventions Form</h2>
+        -->
+        <p class="lead font-lato"></p>
+        <hr/>
+       </header>       
+
+          <section id='step-0'>
+
+            <div class='row'>
+              <h3>Identification</h3>
+              <h4>Employee Selection</h4>
+              <p>Select your credentials</p>
+
+              <style>
+                section{
+                  padding:0;
+                  border-bottom:none;
+                } 
+                section>div.row{
+                  margin:10px 10px 80px 10px !important;
+                }
+                section div.row h4{
+                  display:none;
+                }
+                hr{
+                  display:none;
+                }
+              </style>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+              <script>
+                jQuery(function($) {
+                  $("#step-1").html("");
+                  $("#hidden-employee").val("");
+                  $("#select-employee").on("change",function() {
+                      var selectVal = $(this).val(); 
+                      if (selectVal != -1){
+                        if($("#step-1").html() != ""){
+                          $("#step-1").html("");
+                          $("#hidden-employee").val("");
+                        }
+                        $.ajax({
+                          url: "/get_form_customer_selector",
+                          data: {"employee_id":selectVal},
+                          success: function(data){
+                            $("#step-1").html(data);
+                            $("#hidden-employee").val(selectVal);
+                          }
+                        }).done(function() {
+
+                        });
+                      }else{
+                        $("#step-1").html("");
+                      }
+                  });
+                });
+              </script>
+              <input type="hidden" id="hidden-employee" name="intervention[employee_id]" value="<%=  %>">
+              <select name="intervention[author]" id='select-employee' class="form-select" aria-label="select example" autocomplete="off" >
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@employees.nil? %>
+                <% @employees.each do |employee| %>
+
+                  <option value="<%= employee.id %>">
+                    <%= employee.first_name %> <%= employee.last_name %>
+                  </option>
+
+                <% end %>
+              <% end %>
+
+              </select>
+            </div>
+          </section>
+              <script>
+                jQuery(function($) {
+                  $("#step-2").html("");
+                });
+              </script>
+          <section id="step-1">
+          </section>
+              <script>
+                jQuery(function($) {
+                  $("#step-3").html("");
+                });
+              </script>
+          <section id='step-2'>
+          </section>
+              <script>
+                jQuery(function($) {
+                  $("#step-4").html("");
+                });
+              </script>
+          <section id="step-3">
+          </section>
+              <script>
+                jQuery(function($) {
+                  $("#step-5").html("");
+                });
+              </script>
+          <section id='step-4'>
+          </section>
+
+          <section id="step-5">
+          </section>
+          <section id="step-6">
+            <div class='row'>
+              <hr/>
+              <h3>Description</h3>
+              <h4>Intervention Description</h4>
+              <p>Please describe the nature of the intervention</p>
+              <!--
+              <label for="intervention-description" class="form-label">Intervention description.</label>
+              -->
+              <textarea name="intervention[report]" class="form-control" id="intervention-description" rows="3" autocomplete="off"></textarea>
+            </div>
+          </section>
+
+    </div>
+  </section>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

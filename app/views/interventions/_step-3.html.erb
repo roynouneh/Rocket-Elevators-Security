@@ -1,0 +1,43 @@
+<script>
+                jQuery(function($) {
+                  $("#select-battery").on("change",function() {
+                      var selectVal = $(this).val(); 
+                      if (selectVal != -1){
+                        if($("#step-4").html() != ""){
+                          $("#step-4").html("");
+                        }
+                        $.ajax({
+                          url: "/get_form_column_selector",
+                          data: {"battery_id":selectVal},
+                          success: function(data){
+                            $("#step-4").html(data);
+                          }
+                        }).done(function() {
+
+                        });
+                      }else{
+                        $("#step-4").html("");
+                      }
+                  });
+                });
+</script>
+            <div class='row'>
+              <h4>Step 3/5</h4>
+              <p>Select Battery</p>
+              <select  name="intervention[battery_id]" id="select-battery" class="form-select" aria-label="select example" autocomplete="off">
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@batteries.nil? %>
+                <% @batteries.each do |battery| %>
+
+                  <option value="<%= battery.id %>">
+                    <%= battery.id %>
+                  </option>
+
+                <% end %>
+              <% end %>
+              </select>
+            </div>

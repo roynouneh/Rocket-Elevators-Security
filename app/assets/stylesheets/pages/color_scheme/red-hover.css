@@ -1,0 +1,13 @@
+.btn-warning:hover {
+    border-color: #f16f6f;
+    background-color: #f16f6f;
+}
+
+.btn-warning {
+    border-color:#A94545;
+    background-color:#A94545
+}
+
+#footer {
+    background: linear-gradient(to bottom, #7c2c2c 0%,#2f3097 100%);
+}

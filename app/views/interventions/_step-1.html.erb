@@ -1,0 +1,44 @@
+<script>
+                jQuery(function($) {
+                  $("#select-customer").on("change",function() {
+                      var selectVal = $(this).val(); 
+                      if (selectVal != -1){
+                        if($("#step-2").html() != ""){
+                          $("#step-2").html("");
+                        }
+                        $.ajax({
+                          url: "/get_form_building_selector",
+                          data: {"customer_id":selectVal},
+                          success: function(data){
+                            $("#step-2").html(data);
+                          }
+                        }).done(function() {                             
+                        });
+                      }else{
+                        $("#step-2").html("");
+                      }
+                  });
+                });
+</script>
+            <div class='row'>
+              <h4>Step 1/5</h4>
+              <p>Select Customer</p>
+              <select name="intervention[customer_id]" id="select-customer" class="form-select" aria-label="select example" autocomplete="off">
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@customers.nil? %>
+                <% @customers.each do |customer| %>
+
+                  <option value="<%= customer.id %>">
+                    <%= customer.company_name %>
+                  </option>
+
+                <% end %>
+              <% end %>
+
+
+              </select>
+            </div>

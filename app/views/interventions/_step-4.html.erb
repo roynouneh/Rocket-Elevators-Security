@@ -1,0 +1,43 @@
+<script>
+                jQuery(function($) {
+                  $("#select-column").on("change",function() {
+                      var selectVal = $(this).val(); 
+                      if (selectVal != -1){
+                        if($("#step-5").html() != ""){
+                          $("#step-5").html("");
+                        }
+                        $.ajax({
+                          url: "/get_form_elevator_selector",
+                          data: {"column_id":selectVal},
+                          success: function(data){
+                            $("#step-5").html(data);
+                          }
+                        }).done(function() {
+
+                        });
+                      }else{
+                        $("#step-5").html("");
+                      }
+                  });
+                });
+</script>
+            <div class='row'>
+              <h4>Step 4/5</h4>
+              <p>Select Column</p>
+              <select  name="intervention[column_id]" id="select-column" class="form-select" aria-label="select example" autocomplete="off">
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@columns.nil? %>
+                <% @columns.each do |column| %>
+
+                  <option value="<%= column.id %>">
+                    <%= column.id %>
+                  </option>
+
+                <% end %>
+              <% end %>
+              </select>
+            </div>

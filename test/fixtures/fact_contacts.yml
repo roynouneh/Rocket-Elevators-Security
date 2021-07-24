@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_id:
+  creation: 2021-06-17 08:31:59
+  company_name: MyString
+  email: MyString
+  project_name: MyString
+
+two:
+  contact_id:
+  creation: 2021-06-17 08:31:59
+  company_name: MyString
+  email: MyString
+  project_name: MyString

@@ -1,0 +1,44 @@
+<script>
+                jQuery(function($) {
+                  $("#select-building").on("change",function() {
+                      var selectVal = $(this).val(); 
+                      if (selectVal != -1){
+                        if($("#step-3").html() != ""){
+                          $("#step-3").html("");
+                        }
+                        $.ajax({
+                          url: "/get_form_battery_selector",
+                          data: {"building_id":selectVal},
+                          success: function(data){
+                            $("#step-3").html(data);
+                          }
+                        }).done(function() {
+
+                        });
+                      }else{
+                        $("#step-3").html("");
+                      }
+                  });
+                });
+</script>
+            <div class='row'>
+              <h4>Step 2/5</h4>
+              <p>Select Building</p>
+              <select  name="intervention[building_id]" id="select-building" class="form-select" aria-label="select example" autocomplete="off">
+
+                  <option selected value='-1'>
+                    None
+                  </option>
+
+              <% if !@buildings.nil? %>
+                <% @buildings.each do |building| %>
+
+                  <option value="<%= building.id %>">
+                    <%= building.id %>
+                  </option>
+
+                <% end %>
+              <% end %>
+
+              </select>
+            </div>
