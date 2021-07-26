@@ -1296,7 +1296,10 @@
           </div><!-- /Alert Mandatory -->
 
 
+<!--
           <form action="/leads" method="post" enctype="multipart/form-data">
+-->
+          <%= form_with Lead.new, url:"/leads", method:"post", multipart:"true", validate:"true" do |f| %>
             <fieldset>
               <input type="hidden" name="action" value="contact_send" />
 
@@ -1361,7 +1364,10 @@
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
               </div>
             </div>
+          <% end %>
+<!--
           </form>
+-->
 
         </div>
         <!-- /FORM -->
